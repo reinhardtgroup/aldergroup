@@ -76,3 +76,19 @@ body {
     text-indent: -2em;
     line-height: 1.6;
   }  
+  
+  .discord-button {
+    background-color: #7289da;
+    color: white;
+    padding: 5px 10px;  /* Smaller padding for a smaller button */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em; /* Smaller font size */
+  }
+  
+  .discord-button:hover {
+    background-color: #5b6eae;
+  }
+  
