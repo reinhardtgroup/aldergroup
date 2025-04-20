@@ -19,9 +19,30 @@ function loadArticles(section = null) {
         console.error("Error loading articles:", err);
       });
   }
+
+function loadSections() {
+    fetch('data/sections.json')
+      .then(res => res.json())
+      .then(sections => {
+        const list = document.getElementById('section-list');
+        sections.forEach(section => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="sections/${section.slug}.html">${section.title}</a>`;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error("Error loading sections:", err);
+      });
+  }
   
   // Auto-load on homepage
   if (document.getElementById('article-list') && !window.location.pathname.includes('/sections/')) {
     loadArticles();
+  }
+  
+  // auto load sections
+  if (document.getElementById('section-list') && window.location.pathname.includes('/sections/')) {
+    loadSections();
   }
   
