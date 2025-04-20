@@ -66,4 +66,13 @@ body {
     padding: 10px;
     font-size: 0.8em;
   }
+
+  .workscited {
+    text-align: center  ;
+  }
   
+  .citation {
+    margin-left: 2em;
+    text-indent: -2em;
+    line-height: 1.6;
+  }  
