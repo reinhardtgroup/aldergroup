@@ -16,7 +16,7 @@ function loadArticles(section = null) {
 
       filtered.forEach(article => {
         const li = document.createElement('li');
-        li.innerHTML = `<a href="/articles/${article.slug}.html">${article.title}</a> 
+        li.innerHTML = `<a href="articles/${article.slug}.html">${article.title}</a> 
           <small>(${article.date})</small><br>
           <span>${article.preview}</span>`;
         list.appendChild(li);
