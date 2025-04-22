@@ -1,6 +1,9 @@
+// Function to get the section from the data-section attribute
+const section = document.currentScript.getAttribute('data-section');
+
 // Original loadArticles function for general use
 function loadArticles(section = null) {
-  fetch('../data/articles.json')
+  fetch('data/articles.json')
     .then(res => res.json())
     .then(articles => {
       const list = document.getElementById('article-list');
@@ -48,14 +51,12 @@ function loadArticlesBySection(section) {
     });
 }
 
-// Get the section from the data attribute of the script tag
-const section = document.currentScript.getAttribute('data-section');
-
-// Auto-load articles based on the section
 if (document.getElementById('article-list')) {
   if (section) {
-    loadArticlesBySection(section); // Load the specified section
-  } else {
-    loadArticles(); // Load all articles if no section is specified
+    if (section !== "all") {
+      loadArticlesBySection(section);
+    } else {
+      loadArticles();  // Load all articles if section is "all"
+    }
   }
 }
