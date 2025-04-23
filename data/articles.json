@@ -3,9 +3,19 @@
         "title": "Holocaust: Japanese American Internment Camps",
         "slug": "internment",
         "author": "Joseph F. Reinhardt",
+        "id": "jfr",
         "date": "2025-04-19",
         "section": "world",
         "preview": "Did you know that an entire population of Japanese Americans was once imprisoned?"
+    },
+    {
+        "title": "Napoleon's Rise to Power",
+        "slug": "napoleons-rise-to-power",
+        "author":"Joseph F. Reinhardt",
+        "id": "jfr",
+        "date": "2025-04-22",
+        "section": "world",
+        "preview": "Have you ever wondered how Napoleon rose to power? Or how he was able to gain so many victories during the wars?"
     }
 ]
   
